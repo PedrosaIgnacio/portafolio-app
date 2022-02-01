@@ -1,13 +1,18 @@
 import React from "react";
 import NavBar from "./components/NavBar";
-import Cards from "./components/Cards";
+import PresentationCard from "./components/PresentationCard";
+import { Container } from "react-bootstrap";
+import AboutMeCard from "./components/AboutMeCard";
 
 const Inicio = () => {
   return (
     <>
       <NavBar />
-      <div className="d-flex mt-4">
-        <Cards />
+      <div className=" container-fluid">
+        <Container className="d-flex">
+          <PresentationCard />
+          <AboutMeCard />
+        </Container>
       </div>
     </>
   );

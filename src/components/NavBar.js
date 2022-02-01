@@ -6,7 +6,7 @@ const NavBar = () => {
       <Navbar bg="light" expand="lg">
         <Container>
           <Navbar.Brand>
-            <div className="display-5">
+            <div className="display-5 ">
               IGNACIO <span className="text-muted">PEDROSA</span>
             </div>
           </Navbar.Brand>
@@ -15,7 +15,7 @@ const NavBar = () => {
             id="responsive-navbar-nav"
             className="justify-content-end"
           >
-            <Nav className="h5">
+            <Nav className="h6">
               <Nav.Link href="/">INICIO</Nav.Link>
               <Nav.Link href="/contacto">CONTACTO</Nav.Link>
             </Nav>
