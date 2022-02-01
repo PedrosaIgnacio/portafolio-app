@@ -5,7 +5,7 @@
   transform: scale(1.5);
 }
 #items:hover .flipper,
-#items.hover.flipper {
+#items.flipper {
   transform: rotateY(360deg);
 }
 .flipper {

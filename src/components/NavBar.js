@@ -1,23 +1,38 @@
 import React from 'react'
 import { Container, Navbar, Nav } from 'react-bootstrap'
+import './NavBar.css'
+import { NavLink } from 'react-router-dom'
 const NavBar = () => {
   return (
     <>
       <Navbar bg="light" expand="lg">
         <Container>
           <Navbar.Brand>
-            <div className="display-5">
+            <div className="name-title">
               IGNACIO <span className="text-muted">PEDROSA</span>
             </div>
           </Navbar.Brand>
+
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+
           <Navbar.Collapse
             id="responsive-navbar-nav"
             className="justify-content-end"
           >
             <Nav className="h6">
-              <Nav.Link href="/">INICIO</Nav.Link>
-              <Nav.Link href="/contacto">CONTACTO</Nav.Link>
+              <NavLink
+                to={'/'}
+                className="text-decoration-none list-style-none"
+              >
+                <Nav.Link href="/">INICIO</Nav.Link>
+              </NavLink>
+
+              <NavLink
+                to={'/contacto'}
+                className="text-decoration-none list-style-none"
+              >
+                <Nav.Link href="/contacto">CONTACTO</Nav.Link>
+              </NavLink>
             </Nav>
           </Navbar.Collapse>
         </Container>
