@@ -1,9 +1,9 @@
 import React from "react";
-import { Card } from "react-bootstrap";
 import {
   AiOutlineWhatsApp,
   AiFillTwitterCircle,
   AiFillLinkedin,
+  AiFillInstagram,
 } from "react-icons/ai";
 import SocialMediaElement from "./SocialMediaElement";
 
@@ -24,6 +24,11 @@ const SocialMediaCard = () => {
       socialName: "Linkedin",
       url: "https://www.linkedin.com/in/ignacio-pedrosa-262134190/",
     },
+    {
+      icon: <AiFillInstagram />,
+      socialName: "Instagram",
+      url: "https://www.instagram.com/nachopedrosa1/",
+    },
   ];
   return (
     <div className="d-flex justify-content-center flex-wrap">
@@ -32,6 +37,7 @@ const SocialMediaCard = () => {
           icon={e.icon}
           socialName={e.socialName}
           url={e.url}
+          key={e.socialName}
         />
       ))}
     </div>
