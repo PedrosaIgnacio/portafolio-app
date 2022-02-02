@@ -78,7 +78,7 @@ const MailCard = () => {
                   className="form-control"
                   name="message"
                   id="message"
-                  rows="4"
+                  rows="1"
                   placeholder="Enter message"
                 />
               </div>

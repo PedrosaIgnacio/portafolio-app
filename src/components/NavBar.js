@@ -1,7 +1,7 @@
-import React from "react";
-import { Container, Navbar, Nav } from "react-bootstrap";
-import "./NavBar.css";
-import { NavLink } from "react-router-dom";
+import React from 'react'
+import { Container, Navbar, Nav } from 'react-bootstrap'
+import './NavBar.css'
+import { NavLink } from 'react-router-dom'
 const NavBar = () => {
   return (
     <>
@@ -19,20 +19,20 @@ const NavBar = () => {
           >
             <Nav className="h6">
               <NavLink
-                to={"/"}
+                to={'/'}
                 className="text-decoration-none list-style-none mx-4"
               >
                 <Nav.Link href="/">INICIO</Nav.Link>
               </NavLink>
 
               <NavLink
-                to={"/contacto"}
+                to={'/contacto'}
                 className="text-decoration-none list-style-none mx-4"
               >
                 <Nav.Link href="/contacto">CONTACTO</Nav.Link>
               </NavLink>
               <NavLink
-                to={"/test-hooks"}
+                to={'/test-hooks'}
                 className="text-decoration-none list-style-none mx-4"
               >
                 <Nav.Link href="/test-hooks">TEST HOOKS</Nav.Link>
@@ -42,7 +42,7 @@ const NavBar = () => {
         </Container>
       </Navbar>
     </>
-  );
-};
+  )
+}
 
-export default NavBar;
+export default NavBar

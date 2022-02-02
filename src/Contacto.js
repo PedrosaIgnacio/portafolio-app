@@ -1,16 +1,9 @@
-import React from "react";
-import { Container } from "react-bootstrap";
-import MailCard from "./components/MailCard";
-import NavBar from "./components/NavBar";
-import Background from "./img/bg.jpg";
+import React from 'react'
+import { Container } from 'react-bootstrap'
+import MailCard from './components/MailCard'
+import NavBar from './components/NavBar'
 
 const Contacto = () => {
-  // const background = {
-  //   backgroundImage: `url(${Background})`,
-  //   backgroundPosition: "center",
-  //   backgroundSize: "cover",
-  //   backgroundRepeat: "no-repeat",
-  // };
   return (
     <div>
       <NavBar />
@@ -20,6 +13,6 @@ const Contacto = () => {
         </Container>
       </div>
     </div>
-  );
-};
-export default Contacto;
+  )
+}
+export default Contacto
