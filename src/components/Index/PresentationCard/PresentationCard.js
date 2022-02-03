@@ -1,34 +1,34 @@
-import React from "react";
-import { Button, Card } from "react-bootstrap";
-import toast from "react-hot-toast";
-import CardImage from "../../img/cardimage.jpeg";
-import LocationCard from "./LocationCard";
+import React from 'react'
+import { Button, Card } from 'react-bootstrap'
+import toast from 'react-hot-toast'
+import CardImage from '../../../img/cardimage.jpeg'
+import LocationCard from './LocationCard'
 
 const Cards = () => {
   const downloadClick = () => {
     downloadPDF()
       .then(() => {
-        toast.success("Downloaded");
+        toast.success('Downloaded')
       })
       .catch(() => {
-        toast.error("Download Failed, try again later");
-      });
-  };
+        toast.error('Download Failed, try again later')
+      })
+  }
   const downloadPDF = async () => {
     new Promise((resolve, reject) => {
-      let a = document.createElement("a");
-      a.href = "./PDF/Ignacio_Pedrosa_CVV.docx.pdf";
-      a.download = "PedrosaIgnacio";
-      a.click();
-      resolve();
-    });
-  };
+      let a = document.createElement('a')
+      a.href = './PDF/Ignacio_Pedrosa_CVV.docx.pdf'
+      a.download = 'PedrosaIgnacio'
+      a.click()
+      resolve()
+    })
+  }
 
   return (
     <div className="m-4">
       <Card
         style={{
-          borderRadius: "15px",
+          borderRadius: '15px',
         }}
         className="shadow-lg p-3 mb-5"
       >
@@ -41,7 +41,7 @@ const Cards = () => {
         </div>
         <Card.Body>
           <div className="d-flex justify-content-center">
-            <hr style={{ border: "solid 1px", width: "100%" }} />
+            <hr style={{ border: 'solid 1px', width: '100%' }} />
           </div>
           <Card.Title className="mb-2">
             NATIONAL TECHNOLOGICAL UNIVERSITY
@@ -49,8 +49,10 @@ const Cards = () => {
           <p className="lead">I'm a Systems Engineering student (3rd Year)</p>
           <Card.Subtitle className="my-2">ENCODE SA</Card.Subtitle>
           <p className="lead">Full Stack Developer</p>
-          <Button variant="dark" className="lead " onClick={downloadClick}>
-            <a>DOWNLOAD CV</a>
+          <Button variant="dark" className="lead" onClick={downloadClick}>
+            <a style={{ textDecoration: 'none', color: 'white' }} href="#">
+              DOWNLOAD CV
+            </a>
           </Button>
         </Card.Body>
       </Card>
@@ -58,7 +60,7 @@ const Cards = () => {
         <LocationCard />
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Cards;
+export default Cards

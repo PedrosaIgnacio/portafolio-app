@@ -1,9 +1,10 @@
-import React from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Inicio from "./Inicio";
-import Contacto from "./Contacto";
-import TestHooks from "./TestHooks";
-import { Toaster } from "react-hot-toast";
+import React from 'react'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import Inicio from './components/Index/Inicio'
+import Contacto from './components/Contact/Contacto'
+import TestHooks from './components/TestHooks/TestHooks'
+import { Toaster } from 'react-hot-toast'
+import './index.css'
 
 const BlogApp = () => {
   return (
@@ -17,6 +18,6 @@ const BlogApp = () => {
         </Routes>
       </BrowserRouter>
     </div>
-  );
-};
-export default BlogApp;
+  )
+}
+export default BlogApp

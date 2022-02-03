@@ -1,28 +1,28 @@
-import React, { useState } from "react";
-import { Card } from "react-bootstrap";
-import { useCounter } from "./CounterHook";
+import React, { useState } from 'react'
+import { Card } from 'react-bootstrap'
+import { useCounter } from './CounterHook'
 const CounterApp = () => {
-  const { state, increment, decrement, reset } = useCounter(0);
+  const { state, increment, decrement, reset } = useCounter(0)
 
-  const [input, setInput] = useState(0);
+  const [input, setInput] = useState(0)
 
   const valueInput = (e) => {
-    if (e.target.value !== "") {
-      setInput(e.target.value);
+    if (e.target.value !== '') {
+      setInput(e.target.value)
     } else {
-      setInput(0);
+      setInput(0)
     }
-  };
+  }
 
   return (
     <div className="m-4">
-      <Card style={{ borderRadius: "15px" }} className="shadow-lg p-3 mb-5">
+      <Card style={{ borderRadius: '15px' }} className="shadow-lg p-3 mb-5">
         <Card.Title className="text-center h2">COUNTER APP</Card.Title>
 
-        <hr style={{ border: "solid 1px" }} />
+        <hr style={{ border: 'solid 1px' }} />
 
         <Card.Body>
-          <div className="m-4 col-auto">
+          <div className=" mb-4 col-auto form-group">
             <input
               type="number"
               placeholder="Value to Add o Sus"
@@ -37,9 +37,9 @@ const CounterApp = () => {
               className="btn btn-outline-dark col-md-2"
               onClick={() => {
                 if (Number(input) !== 0) {
-                  decrement(Number(input));
+                  decrement(Number(input))
                 } else {
-                  decrement(1);
+                  decrement(1)
                 }
               }}
             >
@@ -50,9 +50,9 @@ const CounterApp = () => {
               className="btn btn-outline-dark col-md-2"
               onClick={() => {
                 if (Number(input) !== 0) {
-                  increment(Number(input));
+                  increment(Number(input))
                 } else {
-                  increment(1);
+                  increment(1)
                 }
               }}
             >
@@ -60,14 +60,14 @@ const CounterApp = () => {
             </button>
           </div>
           <div className="m-4 row">
-            <button className="btn btn-outline-dark" onClick={reset}>
-              RESET
+            <button className="btn btn-dark lead" onClick={reset}>
+              RESET VALUE
             </button>
           </div>
         </Card.Body>
       </Card>
     </div>
-  );
-};
+  )
+}
 
-export default CounterApp;
+export default CounterApp

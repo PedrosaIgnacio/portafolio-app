@@ -1,32 +1,34 @@
-import React from "react";
-import { Form, Card } from "react-bootstrap";
-import QrCard from "./QrCard";
-import SocialMediaCard from "./SocialMedia/SocialMediaCard";
-import emailjs from "emailjs-com";
-import { init } from "emailjs-com";
-init("user_iWcWSTmDgaWt2LQh7MCT7");
+import React, { useState } from 'react'
+import { Form, Card } from 'react-bootstrap'
+import QrCard from './QrCard'
+import SocialMediaCard from './SocialMedia/SocialMediaCard'
+import emailjs from 'emailjs-com'
+import { init } from 'emailjs-com'
+import toast from 'react-hot-toast'
+init('user_iWcWSTmDgaWt2LQh7MCT7')
 
 const MailCard = () => {
   const sendEmail = (e) => {
-    e.preventDefault();
-    emailjs
-      .sendForm("service_q4gg2vc", "template_f49j2jo", "#myform")
+    e.preventDefault()
+    const test = emailjs.sendForm(
+      'service_q4gg2vc',
+      'template_f49j2jo',
+      '#myform',
+    )
+    toast.promise(test, {
+      loading: 'Sending...',
+      success: 'Email sent',
+      error: 'Something went wrong',
+    })
 
-      .then(
-        (result) => {
-          console.log(result.text);
-        },
-        (error) => {
-          console.log(error.text);
-        }
-      );
-    e.target.reset();
-  };
+    e.target.reset()
+  }
+
   return (
     <div className="m-4 col-md-8">
       <Card
         style={{
-          borderRadius: "15px",
+          borderRadius: '15px',
         }}
         className="shadow-lg p-3 mb-5"
       >
@@ -86,18 +88,18 @@ const MailCard = () => {
               <div className="form-group"></div>
               <input
                 type="submit"
-                className="btn btn-primary col-auto"
+                className="btn btn-dark lead col-auto"
                 value="SEND MESSAGE"
               />
             </div>
           </Form>
         </Card.Body>
       </Card>
-      <hr style={{ border: "solid 1px" }} />
+      <hr style={{ border: 'solid 1px' }} />
       <div className="mt-4">
         <SocialMediaCard />
       </div>
-      <hr style={{ border: "solid 1px" }} />
+      <hr style={{ border: 'solid 1px' }} />
 
       <div className="mt-4 text-center">
         <p className="h2">OR</p>
@@ -117,7 +119,7 @@ const MailCard = () => {
         <QrCard />
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default MailCard;
+export default MailCard

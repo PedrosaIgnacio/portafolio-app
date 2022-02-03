@@ -1,7 +1,7 @@
-import React from "react";
-import { Container } from "react-bootstrap";
-import MailCard from "./components/Contact/MailCard";
-import NavBar from "./components/Navbar/NavBar";
+import React from 'react'
+import { Container } from 'react-bootstrap'
+import MailCard from './MailCard'
+import NavBar from '../Navbar/NavBar'
 
 const Contacto = () => {
   return (
@@ -13,6 +13,6 @@ const Contacto = () => {
         </Container>
       </div>
     </div>
-  );
-};
-export default Contacto;
+  )
+}
+export default Contacto

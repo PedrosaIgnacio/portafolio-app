@@ -1,9 +1,9 @@
-import React from "react";
+import React from 'react'
 
-const FormatInput = ({ type, name, id, placeholder }) => {
+const FormatInput = ({ type, name, id, placeholder, onchange, size }) => {
   return (
     <div className="row justify-content-center">
-      <div className="form-group col-md-4">
+      <div className="form-group col-auto">
         <label className="form-label lead">{name}</label>
         <input
           className="form-control"
@@ -11,10 +11,12 @@ const FormatInput = ({ type, name, id, placeholder }) => {
           name={name}
           id={id}
           placeholder={placeholder}
+          onChange={onchange}
+          maxLength={size}
         />
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default FormatInput;
+export default FormatInput
