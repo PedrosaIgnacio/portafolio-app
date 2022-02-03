@@ -31,11 +31,14 @@ const SkillsCard = () => {
   return (
     <Card style={{ borderRadius: "15px" }} className="shadow-lg p-3 mb-5">
       <Card.Title className="text-center">
-        <p className="h2">SKILSS</p>
+        <p className="h2">SKILLS</p>
+        <div className="d-flex justify-content-center">
+          <hr style={{ border: "solid 1px", width: "75%" }} />
+        </div>
       </Card.Title>
       <Card.Body className="d-flex justify-content-center flex-wrap">
         {test.map((el) => (
-          <SkillElement icon={el.icon} iconName={el.key} />
+          <SkillElement icon={el.icon} iconName={el.key} key={el.key} />
         ))}
       </Card.Body>
     </Card>

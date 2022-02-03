@@ -1,7 +1,7 @@
 import React from "react";
-import { Form, Button, Card } from "react-bootstrap";
+import { Form, Card } from "react-bootstrap";
 import QrCard from "./QrCard";
-import SocialMediaCard from "./SocialMediaCard";
+import SocialMediaCard from "./SocialMedia/SocialMediaCard";
 import emailjs from "emailjs-com";
 import { init } from "emailjs-com";
 init("user_iWcWSTmDgaWt2LQh7MCT7");
@@ -27,7 +27,6 @@ const MailCard = () => {
       <Card
         style={{
           borderRadius: "15px",
-          backgroundColor: "rgba(0, 0, 0, 0.001)",
         }}
         className="shadow-lg p-3 mb-5"
       >

@@ -1,11 +1,11 @@
-import React from 'react'
-import { Container } from 'react-bootstrap'
-import MailCard from './components/MailCard'
-import NavBar from './components/NavBar'
+import React from "react";
+import { Container } from "react-bootstrap";
+import MailCard from "./components/Contact/MailCard";
+import NavBar from "./components/Navbar/NavBar";
 
 const Contacto = () => {
   return (
-    <div>
+    <div className="cont">
       <NavBar />
       <div className="container-fluid">
         <Container className="d-flex justify-content-center">
@@ -13,6 +13,6 @@ const Contacto = () => {
         </Container>
       </div>
     </div>
-  )
-}
-export default Contacto
+  );
+};
+export default Contacto;
