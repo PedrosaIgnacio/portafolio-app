@@ -2,7 +2,6 @@ import React from 'react'
 import { Button, Card } from 'react-bootstrap'
 import toast from 'react-hot-toast'
 import CardImage from '../../../img/cardimage.jpeg'
-import LocationCard from './LocationCard'
 
 const Cards = () => {
   const downloadClick = () => {
@@ -32,17 +31,16 @@ const Cards = () => {
         }}
         className="shadow-lg p-3 mb-5"
       >
-        <div>
+        <div className="d-flex justify-content-center">
           <Card.Img
             variant="top"
             src={CardImage}
-            className="img-responsive rounded-circle mx-auto mt-2 mb-4 p-3"
+            className="rounded-circle mx-auto mt-2 mb-4"
+            style={{ height: '50%', width: '50%', margin: 'auto' }}
           />
         </div>
         <Card.Body>
-          <div className="d-flex justify-content-center">
-            <hr style={{ border: 'solid 1px', width: '100%' }} />
-          </div>
+          <hr style={{ border: 'solid 1px' }} />
           <Card.Title className="mb-2">
             NATIONAL TECHNOLOGICAL UNIVERSITY
           </Card.Title>
@@ -56,9 +54,6 @@ const Cards = () => {
           </Button>
         </Card.Body>
       </Card>
-      <div className="mt-4">
-        <LocationCard />
-      </div>
     </div>
   )
 }

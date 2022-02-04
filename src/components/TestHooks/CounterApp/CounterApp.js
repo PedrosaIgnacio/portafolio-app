@@ -13,6 +13,9 @@ const CounterApp = () => {
       setInput(0)
     }
   }
+  const resetInputValue = () => {
+    setInput(0)
+  }
 
   return (
     <div className="m-4">

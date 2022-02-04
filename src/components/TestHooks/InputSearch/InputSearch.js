@@ -12,7 +12,7 @@ const InputSearch = () => {
 
   return (
     <>
-      <div className="m-4" style={{ maxWidth: '20vw', minWidth: '20vw' }}>
+      <div className="m-4">
         <Card style={{ borderRadius: '15px' }} className="shadow-lg p-3 mb-5">
           <Card.Title className="text-center h2">KEYBOARD EVENT</Card.Title>
           <hr style={{ border: 'solid 1px' }} />

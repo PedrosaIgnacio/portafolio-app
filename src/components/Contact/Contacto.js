@@ -1,18 +1,27 @@
 import React from 'react'
-import { Container } from 'react-bootstrap'
-import MailCard from './MailCard'
+import MailCard from './MailCard/MailCard'
 import NavBar from '../Navbar/NavBar'
+import QrCard from './QR/QrCard'
+import SocialMediaCard from './SocialMedia/SocialMediaCard'
 
 const Contacto = () => {
   return (
-    <div className="cont">
+    <>
       <NavBar />
-      <div className="container-fluid">
-        <Container className="d-flex justify-content-center">
+      <div className="container-fluid d-flex justify-content-center flex-wrap">
+        <div className="col-md-6">
           <MailCard />
-        </Container>
+        </div>
+        <hr style={{ border: 'solid 1px', width: '75%' }} />
+        <div className="col-md-6">
+          <SocialMediaCard />
+        </div>
+        <hr style={{ border: 'solid 1px', width: '75%' }} />
+        <div className="col-md-6">
+          <QrCard />
+        </div>
       </div>
-    </div>
+    </>
   )
 }
 export default Contacto

@@ -6,16 +6,26 @@ import InputSearch from './InputSearch/InputSearch'
 import FormikForm from './TestFormik/FormikForm'
 const TestHooks = () => {
   return (
-    <div className="cont">
+    <>
       <NavBar />
       <div className="container-fluid">
-        <Container className="d-flex">
-          <CounterApp />
-          <InputSearch />
-          <FormikForm />
+        <Container className="row flex-wrap">
+          <div className="row">
+            <div className="col-md-4">
+              <CounterApp />
+            </div>
+            <div className="col-md-4">
+              <InputSearch />
+            </div>
+          </div>
+          <div className="row">
+            <div className="col-md-4">
+              <FormikForm />
+            </div>
+          </div>
         </Container>
       </div>
-    </div>
+    </>
   )
 }
 

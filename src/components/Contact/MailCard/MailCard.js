@@ -1,7 +1,5 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { Form, Card } from 'react-bootstrap'
-import QrCard from './QrCard'
-import SocialMediaCard from './SocialMedia/SocialMediaCard'
 import emailjs from 'emailjs-com'
 import { init } from 'emailjs-com'
 import toast from 'react-hot-toast'
@@ -25,7 +23,7 @@ const MailCard = () => {
   }
 
   return (
-    <div className="m-4 col-md-8">
+    <div className="m-4">
       <Card
         style={{
           borderRadius: '15px',
@@ -95,29 +93,6 @@ const MailCard = () => {
           </Form>
         </Card.Body>
       </Card>
-      <hr style={{ border: 'solid 1px' }} />
-      <div className="mt-4">
-        <SocialMediaCard />
-      </div>
-      <hr style={{ border: 'solid 1px' }} />
-
-      <div className="mt-4 text-center">
-        <p className="h2">OR</p>
-        <div className="mt-4 ">
-          <p className="h2 ">
-            <a
-              className="text-decoration-none"
-              href="https://linktr.ee/nachopedrosa"
-            >
-              Linktree
-            </a>
-          </p>
-        </div>
-      </div>
-
-      <div className="mt-4">
-        <QrCard />
-      </div>
     </div>
   )
 }

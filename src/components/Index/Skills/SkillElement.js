@@ -1,7 +1,11 @@
 import React from 'react'
 const SkillCard = ({ icon, iconName }) => {
   return (
-    <div className="m-4 text-center col-md-2" id="items">
+    <div
+      className="m-4 text-center"
+      style={{ height: '6rem', width: '10rem' }}
+      id="items"
+    >
       <div className="flipper">
         <h1>{icon}</h1>
         <p className="lead">
