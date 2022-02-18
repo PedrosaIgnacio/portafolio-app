@@ -1,7 +1,7 @@
-import React from 'react'
-import { Container, Navbar, Nav } from 'react-bootstrap'
-import './NavBar.css'
-import { NavLink } from 'react-router-dom'
+import React from "react";
+import { Container, Navbar, Nav } from "react-bootstrap";
+import "./NavBar.css";
+import { NavLink } from "react-router-dom";
 const NavBar = () => {
   return (
     <>
@@ -19,30 +19,30 @@ const NavBar = () => {
           >
             <Nav className="h6">
               <NavLink
-                to={'/'}
+                to={"/"}
                 className="text-decoration-none list-style-none mx-4"
               >
-                <Nav.Link href="/">INICIO</Nav.Link>
+                <Nav.Link href="/">HOME</Nav.Link>
               </NavLink>
 
               <NavLink
-                to={'/contacto'}
+                to={"/contact"}
                 className="text-decoration-none list-style-none mx-4"
               >
-                <Nav.Link href="/contacto">CONTACTO</Nav.Link>
+                <Nav.Link href="/contact">CONTACT</Nav.Link>
               </NavLink>
               <NavLink
-                to={'/test-hooks'}
+                to={"/extra"}
                 className="text-decoration-none list-style-none mx-4"
               >
-                <Nav.Link href="/test-hooks">TEST HOOKS</Nav.Link>
+                <Nav.Link href="/extra">EXTRA</Nav.Link>
               </NavLink>
             </Nav>
           </Navbar.Collapse>
         </Container>
       </Navbar>
     </>
-  )
-}
+  );
+};
 
-export default NavBar
+export default NavBar;

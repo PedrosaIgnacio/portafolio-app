@@ -14,3 +14,9 @@
 
   position: relative;
 }
+.cardd {
+  opacity: 0.8;
+}
+.cardd:hover {
+  opacity: 1;
+}

@@ -1,21 +1,24 @@
-import React, { useState } from 'react'
-import { Card } from 'react-bootstrap'
-import FormatInput from '../../FormatInput'
-import './InputSearch.css'
+import React, { useState } from "react";
+import { Card } from "react-bootstrap";
+import FormatInput from "../../FormatInput";
+import "./InputSearch.css";
 
 const InputSearch = () => {
-  const [input, setInput] = useState('')
+  const [input, setInput] = useState("");
 
   const handleKeyboardPress = (e) => {
-    setInput(e.target.value)
-  }
+    setInput(e.target.value);
+  };
 
   return (
     <>
       <div className="m-4">
-        <Card style={{ borderRadius: '15px' }} className="shadow-lg p-3 mb-5">
+        <Card
+          style={{ borderRadius: "15px" }}
+          className="shadow-lg p-3 mb-5 cardd"
+        >
           <Card.Title className="text-center h2">KEYBOARD EVENT</Card.Title>
-          <hr style={{ border: 'solid 1px' }} />
+          <hr style={{ border: "solid 1px" }} />
           <Card.Body>
             <FormatInput
               type="text"
@@ -28,9 +31,9 @@ const InputSearch = () => {
               <p
                 className="lead"
                 style={{
-                  fontSize: '25px',
-                  whiteSpace: 'initial',
-                  overflow: 'hidden',
+                  fontSize: "25px",
+                  whiteSpace: "initial",
+                  overflow: "hidden",
                 }}
               >
                 {input}
@@ -40,7 +43,7 @@ const InputSearch = () => {
         </Card>
       </div>
     </>
-  )
-}
+  );
+};
 
-export default InputSearch
+export default InputSearch;

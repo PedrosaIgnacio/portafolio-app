@@ -1,34 +1,35 @@
-import React from 'react'
-import { Form, Card } from 'react-bootstrap'
-import emailjs from 'emailjs-com'
-import { init } from 'emailjs-com'
-import toast from 'react-hot-toast'
-init('user_iWcWSTmDgaWt2LQh7MCT7')
+import React from "react";
+import { Form, Card } from "react-bootstrap";
+import emailjs from "emailjs-com";
+import { init } from "emailjs-com";
+import toast from "react-hot-toast";
+import "./MailCard.css";
+init("user_iWcWSTmDgaWt2LQh7MCT7");
 
 const MailCard = () => {
   const sendEmail = (e) => {
-    e.preventDefault()
+    e.preventDefault();
     const test = emailjs.sendForm(
-      'service_q4gg2vc',
-      'template_f49j2jo',
-      '#myform',
-    )
+      "service_q4gg2vc",
+      "template_f49j2jo",
+      "#myform"
+    );
     toast.promise(test, {
-      loading: 'Sending...',
-      success: 'Email sent',
-      error: 'Something went wrong',
-    })
+      loading: "Sending...",
+      success: "Email sent",
+      error: "Something went wrong",
+    });
 
-    e.target.reset()
-  }
+    e.target.reset();
+  };
 
   return (
     <div className="m-4">
       <Card
         style={{
-          borderRadius: '15px',
+          borderRadius: "15px",
         }}
-        className="shadow-lg p-3 mb-5"
+        className="shadow-lg p-3 mb-5 cardd"
       >
         <Card.Subtitle className="text-center">
           <p className="h2">SEND MESSAGE</p>
@@ -94,7 +95,7 @@ const MailCard = () => {
         </Card.Body>
       </Card>
     </div>
-  )
-}
+  );
+};
 
-export default MailCard
+export default MailCard;
