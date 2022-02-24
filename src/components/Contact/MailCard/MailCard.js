@@ -38,7 +38,7 @@ const MailCard = () => {
         <Card.Body>
           <Form onSubmit={sendEmail} id="myform">
             <div className="row justify-content-center">
-              <div className="form-group col-md-4">
+              <div className="form-group col-md-6">
                 <label className="form-label lead">Email</label>
                 <input
                   className="form-control"
@@ -49,7 +49,7 @@ const MailCard = () => {
                 />
               </div>
 
-              <div className="form-group col-md-4">
+              <div className="form-group col-md-6">
                 <label className="form-label lead">Name</label>
                 <input
                   className="form-control"
@@ -61,7 +61,7 @@ const MailCard = () => {
               </div>
             </div>
             <div className="row justify-content-center mt-4">
-              <div className="form-group col-md-4">
+              <div className="form-group col-md-6">
                 <label className="form-label lead">Subject</label>
                 <input
                   className="form-control"
@@ -72,7 +72,7 @@ const MailCard = () => {
                 />
               </div>
 
-              <div className="form-group col-md-4">
+              <div className="form-group col-md-6">
                 <label className="form-label lead">Message</label>
                 <textarea
                   className="form-control"

@@ -4,3 +4,6 @@
 .cardd:hover {
   opacity: 1;
 }
+#message{
+  max-height: 20vh;
+}
