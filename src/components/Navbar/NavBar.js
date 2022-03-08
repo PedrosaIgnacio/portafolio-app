@@ -37,6 +37,13 @@ const NavBar = () => {
               >
                 <Nav.Link href="/extra">EXTRA</Nav.Link>
               </NavLink>
+
+              <NavLink
+                to={"/projects"}
+                className="text-decoration-none list-style-none mx-4"
+              >
+                <Nav.Link href="/projects">PROJECTS</Nav.Link>
+              </NavLink>
             </Nav>
           </Navbar.Collapse>
         </Container>
