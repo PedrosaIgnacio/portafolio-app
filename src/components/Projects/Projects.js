@@ -6,7 +6,7 @@ const Projects = () => {
   const ProjectList = [
     {
       name: "Task App",
-      url: "",
+      url: "https://task-app-one-rho.vercel.app/",
     },
   ];
 
