@@ -8,6 +8,10 @@ const Projects = () => {
       name: "Task App",
       url: "https://task-app-one-rho.vercel.app/",
     },
+    {
+      name: "Gif Expert App",
+      url: "https://gif-expert-app-ivory.vercel.app/",
+    },
   ];
 
   return (
