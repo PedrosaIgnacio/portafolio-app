@@ -1,12 +1,10 @@
 .cardd {
   opacity: 0.8;
   transition: all 0.2s ease-in-out;
-
 }
 .cardd:hover {
   opacity: 1;
-  transform: scale(1.10);
-
+  transform: scale(1.1);
 }
 #items {
   transition: all 0.2s ease-in-out;

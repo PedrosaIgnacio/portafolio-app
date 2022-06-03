@@ -25,13 +25,19 @@ const Cards = () => {
   };
 
   return (
-    <div className="m-4">
+    <div className="m-4 presentationContainer">
       <Card
         style={{
           borderRadius: "15px",
         }}
-        className="shadow-lg p-3 mb-5 cardd"
+        className="shadow-lg p-3 mb-5 cardd presentationCard"
       >
+        <Card.Title className="text-center">
+          <p className="h2">PRESENTATION</p>
+          <div className="d-flex justify-content-center">
+            <hr style={{ border: "solid 1px", width: "75%" }} />
+          </div>
+        </Card.Title>
         <div className="d-flex justify-content-center">
           <Card.Img
             variant="top"
@@ -46,7 +52,9 @@ const Cards = () => {
             NATIONAL TECHNOLOGICAL UNIVERSITY
           </Card.Title>
           <p className="lead">I'm a Systems Engineering student (3rd Year)</p>
-          <Card.Subtitle className="my-2">ENCODE SA</Card.Subtitle>
+          <Card.Subtitle className="my-2">Encode SA</Card.Subtitle>
+          <p className="lead">Full Stack Developer</p>
+          <Card.Subtitle className="my-2">Freelance</Card.Subtitle>
           <p className="lead">Full Stack Developer</p>
           <Button variant="dark" className="lead" onClick={downloadClick}>
             <a style={{ textDecoration: "none", color: "white" }} href>

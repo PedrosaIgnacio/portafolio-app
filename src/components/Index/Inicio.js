@@ -12,14 +12,16 @@ const Inicio = () => {
       <NavBar />
       <div className="container-fluid">
         <Container className="d-flex flex-wrap">
-          <div className="col">
+          <div className="col my-3">
             <PresentationCard />
           </div>
-          <div className="col">
+          <div className="col my-3">
             <AboutMeCard />
             <LocationCard />
           </div>
-          <div className="row">
+        </Container>
+        <Container className="d-flex flex-wrap">
+          <div className="row my-3">
             <div className="col">
               <SkillsCard />
             </div>

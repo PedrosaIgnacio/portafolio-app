@@ -1,12 +1,33 @@
 import React from "react";
-import { Form, Card } from "react-bootstrap";
+import { Card } from "react-bootstrap";
+import * as yup from "yup";
 import emailjs from "emailjs-com";
 import { init } from "emailjs-com";
 import toast from "react-hot-toast";
 import "./MailCard.css";
+import { Formik, Form, Field, ErrorMessage } from "formik";
 init("user_iWcWSTmDgaWt2LQh7MCT7");
 
 const MailCard = () => {
+  const validateContactForm = yup.object({
+    email: yup.string().email("Invalid Email").required("Email is required"),
+    name: yup.string().max(30, "Must be less then 30 characters"),
+    subject: yup
+      .string()
+      .max(20, "Must be less then 20 characters")
+      .required("Subject is required"),
+    message: yup
+      .string()
+      .max(50, "Must be less then 50 characters")
+      .required("Message is required"),
+  });
+  const initialValues = {
+    email: "",
+    name: "",
+    subject: "",
+    message: "",
+  };
+
   const sendEmail = (e) => {
     e.preventDefault();
     const test = emailjs.sendForm(
@@ -14,6 +35,7 @@ const MailCard = () => {
       "template_f49j2jo",
       "#myform"
     );
+    console.log(test);
     toast.promise(test, {
       loading: "Sending...",
       success: "Email sent",
@@ -36,62 +58,88 @@ const MailCard = () => {
         </Card.Subtitle>
 
         <Card.Body>
-          <Form onSubmit={sendEmail} id="myform">
-            <div className="row justify-content-center">
-              <div className="form-group col-md-6">
-                <label className="form-label lead">Email</label>
-                <input
-                  className="form-control"
-                  type="email"
-                  name="email"
-                  id="email"
-                  placeholder="Enter email"
-                />
-              </div>
+          <Formik
+            onSubmit={sendEmail}
+            id="myform"
+            initialValues={initialValues}
+            validationSchema={validateContactForm}
+          >
+            <Form>
+              <div className="row justify-content-center">
+                <div className="form-group col-md-6">
+                  <label className="form-label lead">Email</label>
+                  <Field
+                    className="form-control"
+                    type="text"
+                    name="email"
+                    id="email"
+                    placeholder="Enter email"
+                  />
+                  <ErrorMessage
+                    name="email"
+                    component="small"
+                    className="field-error text-danger m-0 p-0"
+                  />
+                </div>
 
-              <div className="form-group col-md-6">
-                <label className="form-label lead">Name</label>
-                <input
-                  className="form-control"
-                  type="text"
-                  name="name"
-                  id="name"
-                  placeholder="Enter name"
-                />
+                <div className="form-group col-md-6">
+                  <label className="form-label lead">Name</label>
+                  <Field
+                    className="form-control"
+                    type="text"
+                    name="name"
+                    id="name"
+                    placeholder="Enter name"
+                  />
+                  <ErrorMessage
+                    name="name"
+                    component="small"
+                    className="field-error text-danger m-0 p-0"
+                  />
+                </div>
               </div>
-            </div>
-            <div className="row justify-content-center mt-4">
-              <div className="form-group col-md-6">
-                <label className="form-label lead">Subject</label>
-                <input
-                  className="form-control"
-                  type="text"
-                  name="subject"
-                  id="subject"
-                  placeholder="Enter subject"
-                />
-              </div>
+              <div className="row justify-content-center mt-4">
+                <div className="form-group col-md-6">
+                  <label className="form-label lead">Subject</label>
+                  <Field
+                    className="form-control"
+                    type="text"
+                    name="subject"
+                    id="subject"
+                    placeholder="Enter subject"
+                  />
+                  <ErrorMessage
+                    name="subject"
+                    component="small"
+                    className="field-error text-danger m-0 p-0"
+                  />
+                </div>
 
-              <div className="form-group col-md-6">
-                <label className="form-label lead">Message</label>
-                <textarea
-                  className="form-control"
-                  name="message"
-                  id="message"
-                  rows="1"
-                  placeholder="Enter message"
-                />
+                <div className="form-group col-md-6">
+                  <label className="form-label lead">Message</label>
+                  <Field
+                    as="textarea"
+                    className="form-control"
+                    name="message"
+                    id="message"
+                    rows="1"
+                    placeholder="Enter message"
+                  />
+                  <ErrorMessage
+                    name="message"
+                    component="small"
+                    className="field-error text-danger m-0 p-0 "
+                  />
+                </div>
               </div>
-            </div>
-            <div className="row justify-content-center mt-4">
-              <div className="form-group"></div>
-              <input
-                type="submit"
-                className="btn btn-dark lead col-auto"
-                value="SEND MESSAGE"
-              />
-            </div>
-          </Form>
+              <div className="row justify-content-center mt-4">
+                <div className="form-group"></div>
+                <button type="submit" className="btn btn-dark lead col-auto">
+                  SEND MESSAGE
+                </button>
+              </div>
+            </Form>
+          </Formik>
         </Card.Body>
       </Card>
     </div>
