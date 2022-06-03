@@ -1,20 +1,24 @@
 import React from "react";
-import { Card } from "react-bootstrap";
+import { Col, Card } from "react-bootstrap";
 
-const ProjectCard = ({ name, url }) => {
+const ProjectCard = ({ name, url, img }) => {
   return (
-    <div className="m-4">
-      <a href={url} style={{ textDecoration: "none", color: "black" }}>
-        <Card
-          style={{
-            borderRadius: "15px",
-          }}
-          className="shadow-lg p-3 mb-5 cardd"
-        >
-          <Card.Title className="text-center">{name}</Card.Title>
-        </Card>
-      </a>
-    </div>
+    <Col className="justify-content-center d-flex">
+      <Card
+        style={{ width: "18rem", borderRadius: "15px" }}
+        className="shadow-lg p-3 mb-5"
+      >
+        <Card.Img variant="top" src={img} />
+        <Card.Body>
+          <Card.Title className="text-center mt-3">{name}</Card.Title>
+          <div className="justify-content-center d-flex mt-5">
+            <a className="btn btn-primary" href={url}>
+              Go visit
+            </a>
+          </div>
+        </Card.Body>
+      </Card>
+    </Col>
   );
 };
 

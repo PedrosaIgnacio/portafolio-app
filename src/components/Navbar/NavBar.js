@@ -22,20 +22,20 @@ const NavBar = () => {
                 to={"/"}
                 className="text-decoration-none list-style-none mx-4"
               >
-                <Nav.Link>HOME</Nav.Link>
+                <Nav.Link href="#/">HOME</Nav.Link>
               </NavLink>
 
               <NavLink
                 to={"/contact"}
                 className="text-decoration-none list-style-none mx-4"
               >
-                <Nav.Link>CONTACT</Nav.Link>
+                <Nav.Link href="#contact">CONTACT</Nav.Link>
               </NavLink>
               <NavLink
                 to={"/projects"}
                 className="text-decoration-none list-style-none mx-4"
               >
-                <Nav.Link>PROJECTS</Nav.Link>
+                <Nav.Link href="#projects">PROJECTS</Nav.Link>
               </NavLink>
             </Nav>
           </Navbar.Collapse>

@@ -12,19 +12,17 @@ const Inicio = () => {
       <NavBar />
       <div className="container-fluid">
         <Container className="d-flex flex-wrap">
-          <div className="col my-3">
-            <PresentationCard />
-          </div>
-          <div className="col my-3">
-            <AboutMeCard />
-            <LocationCard />
-          </div>
-        </Container>
-        <Container className="d-flex flex-wrap">
-          <div className="row my-3">
-            <div className="col">
-              <SkillsCard />
+          <div className="d-flex flex-wrap">
+            <div className="col-md-4 col-sm-12">
+              <PresentationCard />
             </div>
+            <div className="col-md-8 col-sm-12">
+              <AboutMeCard />
+              <LocationCard />
+            </div>
+          </div>
+          <div className="d-flex flex-wrap">
+            <SkillsCard />
           </div>
         </Container>
       </div>

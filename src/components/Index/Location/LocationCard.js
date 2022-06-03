@@ -25,7 +25,6 @@ const LocationCard = () => {
               src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d64790.09351910392!2d-64.20756545412449!3d-31.411099768191548!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9432985f478f5b69%3A0xb0a24f9a5366b092!2zQ8OzcmRvYmE!5e0!3m2!1ses!2sar!4v1643844799528!5m2!1ses!2sar"
               allowFullScreen
               style={{ width: "100%" }}
-              loading="lazy"
             ></iframe>
           </div>
         </Card.Body>

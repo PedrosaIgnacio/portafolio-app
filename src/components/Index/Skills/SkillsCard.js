@@ -36,7 +36,7 @@ const SkillsCard = () => {
             <hr style={{ border: "solid 1px", width: "75%" }} />
           </div>
         </Card.Title>
-        <Card.Body className="d-flex justify-content-center flex-wrap">
+        <Card.Body className="row justify-content-center flex-wrap">
           {test.map((el) => (
             <SkillElement icon={el.icon} iconName={el.key} key={el.key} />
           ))}
